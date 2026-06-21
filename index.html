@@ -688,7 +688,8 @@ HURRICANE_RELEASE
 
 tiki7: 250 Cash
 UltrawEats: UltrawEats trophy, statue, and poster</div>
-
+</div>
+ 
 <script>
 const search = document.getElementById('search');
 const content = document.getElementById('content');
@@ -703,7 +704,6 @@ search.addEventListener('input', function() {
   const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
   content.innerHTML = original.replace(re, m => '<mark>' + m + '</mark>');
 });
-</div>
 </script>
 </body>
 </html>
