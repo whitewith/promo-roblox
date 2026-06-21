@@ -20,6 +20,7 @@ https://playerok.com/profile/whitewith/products</a></p>
 </header>
 
 <input type="text" id="search" placeholder="Поиск по кодам, играм и наградам...">
+<div id="content">
 
 
 Любые совпадение с другими подобными товарами случайно!!!
@@ -702,6 +703,7 @@ search.addEventListener('input', function() {
   const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
   content.innerHTML = original.replace(re, m => '<mark>' + m + '</mark>');
 });
+</div>
 </script>
 </body>
 </html>
