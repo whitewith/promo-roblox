@@ -20,6 +20,7 @@ https://playerok.com/profile/whitewith/products</a></p>
 </header>
 
 <input type="text" id="search" placeholder="Поиск по кодам, играм и наградам...">
+<button id="findBtn">Найти</button>
 <div id="content">
 
 
@@ -692,11 +693,12 @@ UltrawEats: UltrawEats trophy, statue, and poster
  
 <script>
 const search = document.getElementById('search');
+const button = document.getElementById('findBtn');
 const content = document.getElementById('content');
 const original = content.innerHTML;
 
-search.addEventListener('input', function() {
-    const q = this.value.trim();
+button.addEventListener('click', function() {
+    const q = search.value.trim();
 
     content.innerHTML = original;
 
