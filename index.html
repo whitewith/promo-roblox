@@ -690,19 +690,18 @@ tiki7: 250 Cash
 UltrawEats: UltrawEats trophy, statue, and poster</div>
 </div>
  
-<script>
+ <script>
 const search = document.getElementById('search');
 const content = document.getElementById('content');
-const original = content.innerHTML;
 
 search.addEventListener('input', function() {
-  const q = this.value.trim();
-  if (!q) {
-    content.innerHTML = original;
-    return;
+  const q = this.value.toLowerCase();
+
+  if (!q) return;
+
+  if (content.textContent.toLowerCase().includes(q)) {
+    alert('Найдено!');
   }
-  const re = new RegExp(q.replace(/[.*+?^${}()|[\]\\]/g, '\\$&'), 'gi');
-  content.innerHTML = original.replace(re, m => '<mark>' + m + '</mark>');
 });
 </script>
 </body>
