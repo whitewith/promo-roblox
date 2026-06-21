@@ -687,7 +687,7 @@ HURRICANE_RELEASE
 Рабочие промокоды для Restaurant Tycoon 3
 
 tiki7: 250 Cash
-UltrawEats: UltrawEats trophy, statue, and poster</div>
+UltrawEats: UltrawEats trophy, statue, and poster
 </div>
  
 <script>
@@ -707,15 +707,15 @@ search.addEventListener('input', function() {
         'i'
     );
 
-    const match = content.innerHTML.match(re);
+    content.innerHTML = content.innerHTML.replace(
+        re,
+        '<mark id="found">$&</mark>'
+    );
 
-    if (match) {
-        content.innerHTML = content.innerHTML.replace(
-            re,
-            '<span id="found" style="background:yellow;">$&</span>'
-        );
+    const found = document.getElementById('found');
 
-        document.getElementById('found').scrollIntoView({
+    if (found) {
+        found.scrollIntoView({
             behavior: 'smooth',
             block: 'center'
         });
